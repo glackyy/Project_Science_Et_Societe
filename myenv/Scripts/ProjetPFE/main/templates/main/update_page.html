@@ -1,0 +1,6 @@
+<form method="post" action="{% url 'update_page' page_id=page.id %}">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{ page.title }}">
+    <textarea name="content">{{ page.content }}</textarea>
+    <button type="submit">Update</button>
+</form>

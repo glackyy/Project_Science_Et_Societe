@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sciences et Société</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="{% static 'logo.PNG' %}" alt="Logo" class="logo">
+      </div>
+      <div class="title-container">
+        <h1>Sciences et Société</h1>
+        <p>Association culturelle pour la promotion de la science</p>
+      </div>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'logout' %}">تسجيل الخروج</a></li>
+      {% else %}
+      <li><a href="{% url 'login' %}">تسجيل الدخول</a></li>
+      <li><a href="{% url 'register' %}" class="register-link">إنشاء حساب</a></li>
+      {% endif %}
+      <li>
+        <form class="search-form" method="GET" action="{% url 'search' %}">
+          <input type="text" name="query" placeholder="ابحث هنا">
+          <button type="submit">بحث</button>
+        </form>
+      </li>
+      <li><a href="#accueil">الرئيسية</a></li>
+      <li><a href="#presentation">التعريف</a></li>
+      <li><a href="#nouveaux-articles">المقالات الجديدة</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">المواضيع</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#theme-1">الموضوع 1: الصحة والتغذية</a>
+          <a class="dropdown-item" href="#theme-2">الموضوع 2: العلوم</a>
+          <a class="dropdown-item" href="#theme-3">الموضوع 3: الحكومة والمجتمع</a>
+          <a class="dropdown-item" href="#theme-4">الموضوع 4: الفلسفة والمعتقدات</a>
+        </div>
+      </li>
+      <li><a href="#membres">الأعضاء</a></li>
+    </ul>
+  </nav>
+</nav>
+  <main>
+    <section id="accueil">
+      <h2>Sciences et Société : </h2>
+      <section id="presentation">
+        <h2>التعريف بالجمعية</h2>
+          <p>L’Association Sciences et Société (ASS) est labellisée en juillet 2016 par un collectif d’enseignants chercheurs universitaires et de doctorants, l’ASS est domiciliée à la Faculté des Sciences de Kénitra. Ses principales missions sont :
+            1) Menuer des études scientifiques sur les problématiques posées à la société universelle en général et marocaine en particulier.
+            2) Compter en évidence l'importance et la pertinence du système de valeurs pour le développement harmonieux de l'individu et de la société.
+            3) Réaliser des productions scientifiques d'identification de problèmes, de sensibilisation aux solutions et de formation aux Bonnes conduites
+            4) Donner à tous les moyens de communication efficaces autour des thématiques étudiées telles que : congrès scientifiques, séminaires de formation, tables rondes et débats d'idées, périodes, vies, applications informatiques et multimédias
+            5) Identifier et démarcher les partenaires et subventionnaires des organismes pour la réalisation des études et s'appuyer sur les missions associatives.
+            Trois pôles privilégiés d'investigation
+            Pôle 1 : Sciences & Innovation
+            Pôle 2 : Education & Formation
+            Pôle 3 : Santé & Comportement
+          </p>
+      </section>
+    </section>
+    <section>
+    <div class="txt_view actionTxtType2">
+      <div class="box">
+        <div class="txt_move">
+          Sciences et Société
+        </div>
+        <div class="line Lright"></div>
+        <div class="line Lleft"></div>
+        <div class="line Ltop"></div>
+        <div class="line Lbottom"></div>
+      </div>
+    </div>
+  </section>
+    <section id="theme-1">
+      <h2>الموضوع 1: الصحة والتغذية</h2>
+    <section id = "theme-1">
+      <ul>
+        <li>أهمية الغذاء الصحي: يعتبر الغذاء الصحي أساسيًا للحفاظ على صحة الجسم والعقل</li>
+        <li>التحديات الصحية الحديثة: تتزايد المشكلات الصحية المتعلقة بالتغذية في المجتمعات الحديثة</li>
+        <li>الغذاء والعمرة: يمكن التركيز على أهمية الغذاء الملائم لكل مرحلة عمرية</li>
+        <li>النظام الغذائي والثقافة: يمكن التحدث عن تأثير العوامل الثقافية والاجتماعية والدينية على اختيارات الطعام ونمط الأكل لدى الأفراد والمجتمعات</li>
+        <li>الأبحاث العلمية حول التغذية: يمكن التطرق إلى الأبحاث الحديثة التي تركز على علاقة الغذاء بالصحة</li>
+        <li>الأمراض المزمنة والتغذية: يمكن التعرض للأمراض المزمنة وتأثير التغذية في منعها وإدارتها</li>
+      </ul>
+    </section>
+    </section>
+    <section id="theme-2">
+        <h2>الموضوع 2: العلوم</h2>
+        <section>
+        <ul>
+          <li>  : 1 مقالة</li>
+            <p>
+              تستكشف هذه المقالة دور العلوم في المجتمع وأهميتها في تطور الحضارة. تسلط المقالة الضوء على تقدم العلوم في مختلف المجالات مثل الطب، والهندسة، والفيزياء، والكيمياء. كما تناقش الأثر الإيجابي للعلوم على حياة الناس وتطور التكنولوجيا والابتكارات الجديدة التي تحدث بفضل التقدم العلمي
+              <br>
+            تستعرض المقالة أيضًا أهمية البحث العلمي وتشجيع الشباب على متابعة مجالات العلوم والتكنولوجيا وتطوير قدراتهم فيها. يتم استعراض بعض الاختراعات والاكتشافات العلمية البارزة وكيف أثرت في تحسين حياة الناس وتقدم المجتمع
+            </p>
+            <li> : 2 مقالة</li>
+            <p>
+              تتناول هذه المقالة أهمية التعليم العلمي وتأثيره على المجتمع. تسلط الضوء على دور التعليم في تنمية المهارات العلمية وتعزيز الفهم العلمي للناس. يتم مناقشة أهمية تعزيز ثقافة البحث العلمي وتشجيع الابتكار والاكتشاف في مجال العلوم
+              <br>
+              تستعرض المقالة أيضًا بعض النماذج الناجحة لتطبيق العلوم في المجتمع وتحقيق التقدم والتنمية. يتم استعراض مجالات التطبيق المختلفة مثل الزراعة المستدامة، والتكنولوجيا النظيفة، والبحوث العلمية للحلول البيئية والاقتصادية
+            </p>
+        </ul>
+      </section>
+    </section>
+    
+    <section id="theme-3">
+      <h2>الموضوع 3: الحكومة والمجتمع</h2>
+      <section>
+      <ul>
+        <li>  : 1 مقالة</li>
+          <p>
+            تتناول هذه المقالة دور الحكومة في المجتمع وأهمية العلاقة بينهما. تسلط الضوء على دور الحكومة في توفير الخدمات الأساسية للمواطنين مثل التعليم والصحة والبنية التحتية. كما تناقش المقالة أهمية مشاركة المواطنين في عملية صنع القرارات وتعزيز الديمقراطية وحقوق الإنسان في المجتمع
+            <br>
+            المقالة تتحدث أيضًا عن أهمية توفير العدالة الاجتماعية والتكافؤ في المجتمع وكيف يمكن للحكومة أن تساهم في ذلك من خلال وضع السياسات العامة وتنفيذها. كما تستعرض المقالة بعض الأمثلة على الحكومات التي نجحت في تحقيق التنمية المستدامة وتعزيز رفاهية المجتمع
+          </p>
+          <li> : 2 مقالة</li>
+          <p>
+            تتناول هذه المقالة تحليلًا للعلاقة بين الحكومة والمجتمع وتأثيرها على التنمية والاستقرار. يتم استعراض أهمية بناء علاقة تعاونية بين الحكومة والمجتمع المدني والقطاع الخاص. تناقش المقالة دور الشفافية والمساءلة في تعزيز العدالة ومكافحة الفساد في المجتمع
+            <br>
+            تستعرض المقالة أيضًا الأدوار المختلفة للمجتمع المدني في تعزيز الديمقراطية وحقوق الإنسان، مثل المنظمات غير الحكومية والنشطاء والجمعيات الخيرية. كما يتم استعراض بعض النماذج الناجحة للحكومات التي تعمل بشكل فعال في خدمة المجتمع وتحقيق التنمية المستدامة
+          </p>
+      </ul>
+    </section>
+    </section>
+    
+    <section id="theme-4">     
+        <h2>الموضوع 4: الفلسفة والمعتقدات</h2>
+        <section> 
+      <ul>
+        <li>  : 1 مقالة</li>
+          <p>
+            تستكشف هذه المقالة أهمية الفلسفة ودورها في فهم الحياة والعالم من منظور فكري وعقلي. تعرض المقالة أفكارًا فلسفية حول المعنى والوجود والقيم والأخلاق والدين. كما تناقش تأثير المعتقدات الفلسفية على سلوك الأفراد والمجتمع بشكل عام وتأثيرها على صنع القرارات وتوجهات الحياة
+            <br>
+            يتم تقديم بعض المدارس الفلسفية الرئيسية مثل المادية والإيديولوجية والأخلاقية والتفكير الديني، ويتم استعراض بعض الفلاسفة البارزين وأفكارهم المؤثرة في هذا المجال
+          </p>
+          <li> : 2 مقالة</li>          
+          <p>
+            تتناول هذه المقالة تأثير المعتقدات والفلسفات الحياتية على سلوك الأفراد وتوجهاتهم. تناقش المقالة أهمية تحليل المعتقدات والقناعات الشخصية وكيف تؤثر في اتخاذ القرارات والسلوكيات. يتم مناقشة أيضًا تأثير المعتقدات الثقافية والدينية على المجتمع والتعايش الاجتماعي
+            <br>
+            يتم استعراض بعض الفلسفات الحياتية المعروفة مثل الهندوسية والبوذية والإسلام والمسيحية والفلسفة الصينية. يتم تقديم وجهات نظر مختلفة وتفسيرات حول الحياة والمعنى والروحانية والأخلاق والقوانين الكونية
+          </p>
+      </ul>
+    </section>
+    </section>
+    <section id="membres">
+      <h2>أعضاء الجمعية</h2>
+      <section>
+      <div class="media-container">
+        <div class="photos">
+          <img src="{% static 'photo1.jpg' %}" alt="Photo 1">
+          <img src="{% static 'photo2.jpg' %}" alt="Photo 2">
+          <img src="{% static 'photo1.jpg' %}" alt="Photo 3">
+        </div>
+        <div class="video">
+          <video id="my-video" controls>
+            <source src="{% static 'video1.mp4' %}" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+    </section>
+    
+    <section id ="contact" style="display: flex;">
+      <div style="flex: 1;">
+        <div id="map-container" style="width: 100%; height: 100vh;">
+          <iframe src="https://www.google.com/maps/place/Universit%C3%A9+Ibn+Tofail/@34.2504493,-6.6058325,14.36z/data=!4m19!1m12!4m11!1m3!2m2!1d-6.5864533!2d34.2454502!1m6!1m2!1s0xda759f000000001:0xb0f2670fb7c990f7!2sUniversit%C3%A9+Ibn+Tofail,+Av.+de+L'Universit%C3%A9,+K%C3%A9nitra!2m2!1d-6.5848731!2d34.2460423!3m5!1s0xda759f000000001:0xb0f2670fb7c990f7!8m2!3d34.2460423!4d-6.5848731!16s%2Fg%2F120qklqy?hl=fr&entry=ttu" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div id="style="flex: 1; padding: 20px;">
+        <h2>اتصل بنا</h2>
+        <section>
+        <p>Adresse: B.P 242 Kénitra Maroc</p>
+        <p>Email: presidence@uit.ac.ma</p>
+        <p>Tél: (+212) 6 61 40 35 57</p>
+        <p>Fax: (+212) (05 37 37 40 52)</p>
+      </div>
+      </section>
+    </section>
+    
+    
+    <div id="registration-container" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      {% include 'main/register.html' %}
+    </div>
+    <img src="{% static 'image1.jpg' %}" alt="image1" style="max-width: 1560px; height: auto";>
+  </main>
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2023 Sciences et Société</p>
+  </footer>
+  <div style="display: none;">
+    <div id="registration-popup">
+      <h3>Registration Form</h3>
+      <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Register">
+      </form>
+    </div>
+  </div>
+  <script src="{% static 'custom.js' %}"></script>
+</body>
+</html>

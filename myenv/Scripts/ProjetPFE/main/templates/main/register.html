@@ -1,0 +1,50 @@
+{% load static %}
+
+{% block content %}
+<header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="{% static 'logo.PNG' %}" alt="Logo" class="logo">
+      </div>
+      <div class="title-container">
+        <h1>Sciences et Société</h1>
+        <p>Association culturelle pour la promotion de la science</p>
+      </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-lg-6">
+            <h2 class="usertitle">User Registration</h2>
+            <form method="POST" action="{% url 'register' %}" class="register-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-flex flex-column align-items-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    <button id="close-btn" class="btn btn-secondary btn-block">Close</button>
+                </div>
+            </form>
+            {% if form.errors %}
+            <div class="errors">
+                <h2>Errors:</h2>
+                <ul>
+                    {% for field in form %}
+                    {% if field.errors %}
+                    <li>{{ field.label }}: {{ field.errors|striptags }}</li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'custom.js' %}"></script>
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+{% endblock extra_css %}

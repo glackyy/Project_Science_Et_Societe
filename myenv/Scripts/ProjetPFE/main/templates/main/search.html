@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+  <h1>Search Results</h1>
+  
+  <div class="search-form">
+    <form method="GET">
+      {% csrf_token %}
+      <input type="text" name="search_query" placeholder="Search">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <h1>Search Results</h1>
+  
+  <div class="search-results">
+    {% if results %}
+      <ul>
+        {% for result in results %}
+          <li>{{ result }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No results found.</p>
+    {% endif %}
+  </div>
+  
+{% endblock %}

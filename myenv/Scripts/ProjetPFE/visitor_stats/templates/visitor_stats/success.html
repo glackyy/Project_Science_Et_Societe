@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .success-message {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .submitted-data {
+            margin-top: 20px;
+        }
+
+        .submitted-data label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        Thank you for submitting the form!
+    </div>
+
+    <div class="submitted-data">
+        <h2>Submitted Data:</h2>
+        <label>Date:</label> {{ date }}
+        <label>Time:</label> {{ time }}
+        <label>Duration:</label> {{ duration }}
+        <label>Location:</label> {{ location }}
+        <label>Purpose:</label> {{ purpose }}
+        <label>Other Purpose:</label> {{ other_purpose }}
+        <label>Source:</label> {{ source }}
+        <label>Other Source Text:</label> {{ other_source_text }}
+    </div>
+</body>
+</html>

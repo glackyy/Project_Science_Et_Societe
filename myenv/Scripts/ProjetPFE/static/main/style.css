@@ -1,0 +1,182 @@
+/* Colors */
+:root {
+  --primary-color: #FF6F61;
+  --secondary-color: #4ECDC4;
+  --accent-color: #FFD166;
+  --text-color: #333;
+  --background-color: #F0F0F0;
+}
+
+/* Styles généraux */
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* En-tête */
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Menu de navigation */
+nav {
+  background-color: var(--background-color);
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Sections principales */
+main section {
+  padding: 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Pied de page */
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+
+  main section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  main section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+
+.container {
+margin-top: 50px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.btn-block {
+margin-top: 20px;
+}
+
+
+@media (max-width: 576px) {
+.container {
+  margin-top: 30px;
+}
+}
+
+@media (min-width: 992px) {
+.col-lg-6 {
+  max-width: 400px;
+}
+}
+#registration-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#registration-popup {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#registration-popup h3 {
+  margin-bottom: 10px;
+}
+
+#registration-popup input {
+  margin-bottom: 10px;
+}
+
+
