@@ -39,7 +39,6 @@ pip install -r requirements.txt
 1. Run the Django development server:
 python manage.py runserver
 
-
 2. Access the application at `http://localhost:8000` in your web browser.
 
 <!-- Contributing -->
@@ -58,11 +57,13 @@ The application features captivating CSS animations and transitions, enhancing v
 ## Contact
 For questions or feedback, contact [othmanesticky@gmail.com]
 
-### Environment
+<!-- Environment -->
+## Environment
 * Front-End: JavaScript, HTML, CSS
 * Back-end: Python3, Django, MySQL
 * OS: Windows 10
 
-### Authors
+<!-- Authors -->
+## Authors
 * Othmane Boubecheur
 * Mohamed NAFIL
