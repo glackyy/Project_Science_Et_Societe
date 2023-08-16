@@ -13,6 +13,8 @@ A user-friendly web application for login and registration, designed with captiv
 > [License](#license)
 > [Styling](#styling)
 > [Contact](#contact)
+> [Environment](#environment)
+> [Authors](#authors
 
 <!-- Features -->
 ## Features
