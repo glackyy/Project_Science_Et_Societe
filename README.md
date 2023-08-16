@@ -2,7 +2,7 @@
 # Site Sciences et Société Web Application
 
 <!-- Project Description -->
-A user-friendly web application for login and registration, designed with captivating CSS animations that enhance the user interface, making the process intuitive and visually appealing.
+A user-friendly web application, designed with captivating CSS animations that enhance the user interface, making the process intuitive and visually appealing.
 
 <!-- Table of Contents -->
 ## Table of Contents
