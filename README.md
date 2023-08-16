@@ -5,7 +5,7 @@
 A user-friendly web application for login and registration, designed with captivating CSS animations that enhance the user interface, making the process intuitive and visually appealing.
 
 <!-- Table of Contents -->
-###Table of Contents
+## Table of Contents
 > [Features](#features)
 > [Installation](#installation)
 > [Usage](#usage)
