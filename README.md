@@ -28,22 +28,18 @@ A user-friendly web application for login and registration, designed with captiv
 1. Clone the repository:
 git clone https://github.com/glackyy/Project_Science_Et_Societe.git
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
 cd project
 
 3. Install required packages:
 pip install -r requirements.txt
-
-php
-Copy code
 
 <!-- Usage -->
 ## Usage
 1. Run the Django development server:
 python manage.py runserver
 
-php
-Copy code
+
 2. Access the application at `http://localhost:8000` in your web browser.
 
 <!-- Contributing -->
@@ -61,3 +57,12 @@ The application features captivating CSS animations and transitions, enhancing v
 <!-- Contact -->
 ## Contact
 For questions or feedback, contact [othmanesticky@gmail.com]
+
+### Environment
+* Front-End: JavaScript, HTML, CSS
+* Back-end: Python3, Django, MySQL
+* OS: Windows 10
+
+### Authors
+* Othmane Boubecheur
+* Mohamed NAFIL
